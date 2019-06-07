@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style type="text/css">
+.transition{
+-webkit-transform: scale(3);
+-moz-transform: scale(3);
+-o-transform: scale(3);
+transform: scale(1.6);
+}
+
+#img{
+
+top: 100px;
+left: 500px;
+-webkit-transform: all;
+-moz-transform: all;
+-o-transform: all;
+-ms-transform: all;
+}
+</style>
+</head>
+
+<body>
+<h1>pokemon</h1>
+<img id="img" src="E9EHO5l.gif"/><br/><br/>
+<button id="button"> pokemon </button>
+<script type = "text/javascript">
+    var check=true;
+    $(document).ready(function() {
+        $('#button').click(function(){
+            if(check==true){
+                $('#img').hide();
+                console.log(check);
+                check=false;
+                $("#button").html('show');
+
+            }
+            else{
+                $('#img').show();
+                console.log(check);
+                check=true;
+                $("#button").html('hide');
+            }
+        });
+        });
+		
+		 $(document).ready(function() {
+        $('#L').click(function() {
+            $('#img').animate({
+            'marginLeft' : "-=30px" //moves left
+            });
+        });
+        $('#R').click(function() {
+            $('#img').animate({
+            'marginLeft' : "+=30px" //moves right
+            });
+        });
+        $('#D').click(function() {
+            $('#img').animate({
+            'marginTop' : "+=30px" //moves down
+            });
+        });
+        $('#U').click(function() {
+            $('#img').animate({
+            'marginTop' : "-=30px" //moves up
+            });
+        });
+    });
+        </script>
+		<div style="padding:20px;">
+         <button id="L">(<)</button> 
+          <button id="R">(>)</button> 
+          <button id="D">(v)</button> 
+          <button id="U">(^)</button></div>
+        
+</body>
+
+<script type="text/javascript">
+var check = true;
+$(document).ready(function(){
+    $('#img').hover(function(){
+        $('#img').toggleClass('transition');
+    });
+});
+</script>
+
+</html>

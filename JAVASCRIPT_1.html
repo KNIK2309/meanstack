@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+        var click = 0
+        var emp = new Array();
+            function dch(){
+                
+                s1=document.getElementById("s").value;
+                s2=document.getElementById("rs").value;
+               
+                    if(s1.includes(s2)){
+                        document.getElementById("result").innerHTML = "true";
+                    }
+                    else{
+                        document.getElementById("result").innerHTML = "false"
+                    }
+                }
+            
+
+            </script>
+       
+</head>
+<body>
+Enter String1:  <input type="text" id="s"/> <br/><br/>
+Enter String2: <input type="text" id="rs"/> <br/><br/>
+<input type="button" value="click here" onclick="dch()" />
+<p id="result"> </p>
+
+</body>
+</html>
