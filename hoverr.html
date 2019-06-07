@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+       <p id="pid">hmmm</p>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $('p').hover(function(){
+                $('#pid').css('background','yellow')
+            }),
+            $("#pid").hover(function(){
+                $(this).animate({'opacity':'0.7'},{'background-color':'blue'});
+            });
+        })
+    </script>
+</html>
